@@ -1,60 +1,14 @@
-# Getting started with your app
+## Performance tests (k6)
 
-## Available Scripts
+### Pré-requisitos
+- Docker Desktop
+- Node.js / npm
+- k6 (Grafana)
 
-In the project directory you can run:
-
-### `npm start`
-
-Runs the app in the development mode.
-By default, it is accessible at http://localhost:3000
-
-### `npm test`
-
-Launches the test runner.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.
-
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
-
-## Development
-
-Make sure you have Node.js 14, npm, and Docker installed.
-
-- Instal Yarn
-```
-npm install -g yarn
-```
-
-- Install dependencies
-
-```
-yarn install
-```
-
-- Generate Prisma client
-
-```
-npm run prisma:generate
-```
-
-- Start database in Docker
-
-```
+### Subir banco e API
+```bash
 npm run docker:db
-```
-
-- Initiate the database
-
-```
+npm install --legacy-peer-deps
+npm run prisma:generate
 npm run db:init
-```
-
-- Start the server
-
-```
-yarn start
-```
+npm run start
